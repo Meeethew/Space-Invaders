@@ -15,7 +15,7 @@ import static com.meeethew.main.StaticData.WIDTH;
 public class Main extends Application {
 
     private GraphicsContext gc;
-    PlayerEntity p;
+    private PlayerEntity p;
 
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -59,12 +59,12 @@ public class Main extends Application {
 
     private void onUpdate() {
 
-        if ((p.getX()) < 10){
+        if ((p.getX()) < 10) {
             p.setX(0);
         }
 
-        if (p.getX() > WIDTH -p.getWidth()) {
-            p.setX(WIDTH-p.getWidth());
+        if (p.getX() > WIDTH - p.getWidth()) {
+            p.setX(WIDTH - p.getWidth());
         }
 
         gc.clearRect(0, 0, WIDTH, HEIGHT);
