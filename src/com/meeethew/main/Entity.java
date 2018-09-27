@@ -8,12 +8,14 @@ public abstract class Entity {
     protected double y;
     protected double height;
     protected double width;
+    protected boolean alive;
 
     public Entity(double x, double y, double width, double height) {
         setX(x);
         setY(y);
         setWidth(width);
         setHeight(height);
+        alive = true;
     }
 
     public void setX(double x) {
@@ -46,6 +48,10 @@ public abstract class Entity {
 
     public double getHeight() {
         return height;
+    }
+
+    public boolean isAlive(){
+        return alive;
     }
 
     public abstract void update();
