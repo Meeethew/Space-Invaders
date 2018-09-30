@@ -23,4 +23,5 @@ public class BulletEntity extends Entity {
     public void render(GraphicsContext gc) {
         gc.fillRect(x, y, width, height);
     }
+
 }
