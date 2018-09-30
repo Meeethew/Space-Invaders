@@ -1,6 +1,8 @@
 package com.meeethew.main;
 
+import javafx.geometry.Bounds;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.shape.Rectangle;
 
 public abstract class Entity {
 
@@ -52,6 +54,15 @@ public abstract class Entity {
 
     public boolean isAlive(){
         return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
+
+    public Bounds getBounds(){
+        Rectangle r = new Rectangle(x, y, width, height);
+        return r.getBoundsInParent();
     }
 
     public abstract void update();
